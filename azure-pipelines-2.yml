@@ -1,0 +1,27 @@
+# Starter pipeline
+# Start with a minimal pipeline that you can customize to build and deploy your code.
+# Add steps that build, run tests, deploy, and more:
+# https://aka.ms/yaml
+
+#3.	כתבי פייפליין המקבל פרמטר בשם name ומדפיס hello <name>
+
+
+trigger: none
+pool: 
+  name: my agent pool
+parameters:
+  - name: name
+    type: string
+    default: dev
+    values:
+      - dev
+        prod
+stages:
+  - stage: "pipline3"
+    jobs:
+      - job: "job3"
+        steps:
+          - script: echo "name = ${{parameters.name}}"
+ 
+
+
