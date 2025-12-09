@@ -1,11 +1,11 @@
 
 trigger: none
 pool:
-  -name: my Agent pool
+  -name: "my Agent pool"
 stages:
-  - stage: one_stage
+  - stage: "one_stage"
     jobs:
-      - job: one_job
+      - job: "one_job"
         steps:
           - script: echo "Hello from my first pipeline!"
   
