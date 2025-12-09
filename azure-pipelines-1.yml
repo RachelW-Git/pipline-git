@@ -1,0 +1,31 @@
+# Starter pipeline
+# Start with a minimal pipeline that you can customize to build and deploy your code.
+# Add steps that build, run tests, deploy, and more:
+# https://aka.ms/yaml
+
+#2.	כתבי פייפליין המורכב מ 2 stages בשמות stage1,stage2 שבכל אחד יש 2 jobs בשמות stage1/2_job1/2 בהתאמה ובכל job יש הדפסה של המיקום שלו מבחינת ה stage וה Job-
+
+trigger: none
+
+pool:
+  name: "my Agent pool"
+
+stages:
+  - stage: "stage1"
+    jobs:
+      - job: "job1"
+        steps:
+          - script: echo "in stage1 job1"
+      - job: "job2"
+        steps:
+          - script: echo "in stage1 job2"
+  - stage: "stage2"
+    jobs:
+      - job: "job1"
+        steps:
+          - script: echo "in stage2 job1"
+      - job: "job2"
+        steps:
+          - script: echo "in stage2 job2"
+
+          
