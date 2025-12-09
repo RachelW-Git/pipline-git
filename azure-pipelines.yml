@@ -1,7 +1,8 @@
 
 trigger: none
 pool:
-  -name: "my Agent pool"
+  name: "my Agent pool"
+
 stages:
   - stage: "one_stage"
     jobs:
