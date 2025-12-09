@@ -8,14 +8,14 @@
 
 trigger: none
 pool: 
-  name: my agent pool
+  name: "my agent pool"
 parameters:
   - name: name
     type: string
     default: dev
     values:
       - dev
-        prod
+      - prod
 stages:
   - stage: "pipline3"
     jobs:
